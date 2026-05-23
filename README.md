@@ -56,9 +56,9 @@ cp .env.example .env.local
 
 Fill in `.env.local`:
 ```env
-NEXT_PUBLIC_SUPABASE_URL=https://your-project-ref.supabase.co
-NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-public-key
-NEXT_PUBLIC_SITE_URL=http://localhost:3000
+NEXT_PUBLIC_SUPABASE_URL=https://lwnzmqogytbrjoolpkaq.supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imx3bnptcW9neXRicmpvb2xwa2FxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzk1MDA4MzAsImV4cCI6MjA5NTA3NjgzMH0.gaEUkVw0xlDchT33r3-2bN2rp-eZH1YIE8nXUKcveMw
+NEXT_PUBLIC_SITE_URL=https://source-air-flight.vercel.app
 ```
 
 Find these values at: **Supabase Dashboard → Project Settings → API**
