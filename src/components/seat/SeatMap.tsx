@@ -48,12 +48,22 @@ export default function SeatMap({ flightId, initialSeats }: SeatMapProps) {
 
   const seatsByRow = useMemo(() => {
     const rows = new Map<number, Map<string, Seat>>();
-    for (const s of seats.values()) {
-      const row = parseInt(s.seat_number.replace(/[A-Z]/g, ""), 10);
+  
+    for (const s of Array.from(seats.values())) {
+      const row = parseInt(
+        s.seat_number.replace(/[A-Z]/g, ""),
+        10
+      );
+  
       const col = s.seat_number.replace(/\d/g, "");
-      if (!rows.has(row)) rows.set(row, new Map());
+  
+      if (!rows.has(row)) {
+        rows.set(row, new Map());
+      }
+  
       rows.get(row)!.set(col, s);
     }
+  
     return rows;
   }, [seats]);
 
